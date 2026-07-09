@@ -388,6 +388,24 @@
     width: 100%;
     border: 1px solid var(--gold);
   }
+  .arkiv-par {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 820px;
+    margin: 3.5rem auto 0;
+  }
+  .arkiv-par .arkiv {
+    margin: 0;
+    max-width: none;
+  }
+  .arkiv-par img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  @media (max-width: 700px) {
+    .arkiv-par { grid-template-columns: 1fr; gap: 2.5rem; max-width: 480px; }
+  }
   .bilderekke {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -606,10 +624,16 @@
         <div class="tid"><span class="aar">1983</span><span class="kven">Hallgeir og&nbsp;Marianne</span></div>
         <div class="tid"><span class="aar">2017</span><span class="kven">Ingar og&nbsp;Elisabeth</span></div>
       </div>
-      <figure class="arkiv">
-        <img src="assets/tunet-1905.jpg" alt="Familien samla framfor det gamle hovudhuset med torvtak p&aring; Klokkargarden" loading="lazy">
-        <figcaption>Gardstunet og hovudhuset, kring 1905&ndash;1910<br>&mdash; fr&aring; familiearkivet &mdash;</figcaption>
-      </figure>
+      <div class="arkiv-par">
+        <figure class="arkiv">
+          <img src="assets/tunet-1905.jpg" alt="Familien samla framfor det gamle hovudhuset med torvtak p&aring; Klokkargarden" loading="lazy">
+          <figcaption>Gardstunet og hovudhuset, kring 1905&ndash;1910<br>&mdash; fr&aring; familiearkivet &mdash;</figcaption>
+        </figure>
+        <figure class="arkiv">
+          <img src="assets/huset-2026.jpg" alt="Hovudhuset i funkisstil med gardshunden Zelda p&aring; plenen" loading="lazy">
+          <figcaption>Hovudhuset og gardshunden Zelda, ein fin maidag<br>&mdash; 2026 &mdash;</figcaption>
+        </figure>
+      </div>
       <figure class="arkiv">
         <video controls preload="none" playsinline poster="assets/historia-poster.jpg">
           <source src="assets/historia.mp4" type="video/mp4">
