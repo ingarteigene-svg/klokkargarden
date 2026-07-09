@@ -114,9 +114,13 @@
   }
   nav.scrolled { background: var(--brg); padding: 0.8rem 2rem; }
   .logo {
-    font-weight: 700;
-    font-size: 1.25rem;
+    display: block;
     text-decoration: none;
+  }
+  .logo img {
+    display: block;
+    height: 42px;
+    width: auto;
   }
   .nav-links {
     display: flex;
@@ -413,7 +417,7 @@
 <body>
 
 <nav id="nav">
-  <a class="logo" href="#">Klokkargarden</a>
+  <a class="logo" href="#"><img src="assets/logo.svg" alt="Klokkargarden — Anno 1860"></a>
   <div class="nav-links">
     <a href="#historia">Historia</a>
     <a href="#gardsbutikken">Gardsbutikken</a>
