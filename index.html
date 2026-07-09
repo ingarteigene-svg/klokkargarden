@@ -163,9 +163,10 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
+    /* 0.7 (ikke briefens 0.55): råvideoen er svært lys — kontrastkravet for hvit tekst styrer */
     background:
       linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,20,11,0.45) 100%),
-      rgba(0,66,37,0.55);
+      rgba(0,66,37,0.7);
   }
   .hero-content {
     position: relative;
