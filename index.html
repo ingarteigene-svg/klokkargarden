@@ -233,6 +233,26 @@
 
   .historia .anno { margin-top: 5rem; }
 
+  .arkiv {
+    max-width: 480px;
+    margin: 3.5rem auto 0;
+  }
+  .arkiv video {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--gold);
+  }
+  .arkiv figcaption {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 2;
+    color: var(--gold);
+    text-align: center;
+  }
+
   /* ---------- Gardsbutikken ---------- */
 
   .info-row {
@@ -361,6 +381,12 @@
       <h2 class="reveal">Ein gard med r&oslash;ter</h2>
       <p>Klokkargarden har vore i drift sidan 1864. Gjennom generasjonar har garden vore ein del av bygda &mdash; f&oslash;rst som klokkargard, sidan som levande gardsbruk med dyr, jord og folk.</p>
       <p>I dag driv vi garden vidare med same haldning som dei f&oslash;r oss: godt handverk, godt dyrehald og respekt for det som er ekte. Det du finn hos oss, kjem herifr&aring;.</p>
+      <figure class="arkiv">
+        <video controls preload="none" playsinline poster="assets/historia-poster.jpg">
+          <source src="assets/historia.mp4" type="video/mp4">
+        </video>
+        <figcaption>&Aring;sbj&oslash;rg (Grimstad) Teigene og Klokkar-Ingolf<br>&mdash; fr&aring; familiearkivet &mdash;</figcaption>
+      </figure>
       <div class="anno"><span>Anno 1864</span></div>
     </div>
   </section>
@@ -402,7 +428,7 @@
       <h2 class="reveal">Velkomen til gards</h2>
       <p class="adresse" style="text-align:center;">Klokkargarden &middot; Teigene, 6060 Hareid</p>
       <div class="kontakt-lenker">
-        <a class="lenke-sek" href="https://www.google.com/maps/search/?api=1&amp;query=Teigene%2C+6060+Hareid" target="_blank" rel="noopener">Opne i kart</a>
+        <a class="lenke-sek" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Opne i kart</a>
         <!-- TODO: byt ut med nøyaktig Facebook-side-URL -->
         <a class="lenke-sek" href="https://www.facebook.com" target="_blank" rel="noopener">F&oslash;lg oss p&aring; Facebook</a>
       </div>
