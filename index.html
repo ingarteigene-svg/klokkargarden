@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Klokkargarden — Gard og gardsbutikk på Hareid, sidan 1864</title>
-<meta name="description" content="Klokkargarden på Hareid — ferske egg og ekte gardsdrift på Sunnmøre sidan 1864. Sjølvbetent gardsbutikk, open heile veka.">
+<title>Klokkargarden — Gard og gardsbutikk på Hareid, sidan 1860</title>
+<meta name="description" content="Klokkargarden på Hareid — ferske egg og ekte gardsdrift på Sunnmøre sidan 1860. Sjølvbetent gardsbutikk, open heile veka.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -233,6 +233,30 @@
 
   .historia .anno { margin-top: 5rem; }
 
+  .tidslinje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    color: var(--gold);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+  }
+  .tidslinje span + span::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin: 0 0.9rem;
+  }
+  @media (max-width: 700px) {
+    .tidslinje { font-size: 0.7rem; letter-spacing: 0.1em; }
+    .tidslinje span + span::before { width: 10px; margin: 0 0.45rem; }
+  }
+
   .arkiv {
     max-width: 480px;
     margin: 3.5rem auto 0;
@@ -407,8 +431,8 @@
   <div class="hero-content">
     <span class="eyebrow hero-seq" style="--d:0.1s">Gard og gardsbutikk &middot; Hareid</span>
     <h1 class="hero-seq" style="--d:0.25s">Klokkargarden</h1>
-    <div class="anno hero-seq" style="--d:0.4s"><span>Anno 1864</span></div>
-    <p class="hero-sub hero-seq" style="--d:0.55s">Ferske egg og ekte gardsdrift p&aring; Sunnm&oslash;re &mdash; sidan 1864.</p>
+    <div class="anno hero-seq" style="--d:0.4s"><span>Anno 1860</span></div>
+    <p class="hero-sub hero-seq" style="--d:0.55s">Ferske egg og ekte gardsdrift p&aring; Sunnm&oslash;re &mdash; sidan 1860.</p>
     <a class="cta hero-seq" style="--d:0.7s" href="#gardsbutikken">Bes&oslash;k gardsbutikken</a>
   </div>
   <div class="scroll-cue" aria-hidden="true"></div>
@@ -420,15 +444,18 @@
     <div class="section-inner">
       <span class="eyebrow reveal">Historia</span>
       <h2 class="reveal">Ein gard med r&oslash;ter</h2>
-      <p>Klokkargarden har vore i drift sidan 1864. Gjennom generasjonar har garden vore ein del av bygda &mdash; f&oslash;rst som klokkargard, sidan som levande gardsbruk med dyr, jord og folk.</p>
+      <p>Klokkargarden har namnet sitt etter Lars Hareide, klokkaren i bygda, som fekk sk&oslash;yte p&aring; garden i 1860. Lars og kona Hansine tok til seg fire fosterborn &mdash; mellom dei Elias, som tok over i 1900 og bygde nytt hus p&aring; garden. Sidan har garden g&aring;tt fr&aring; hand til hand i same slekta: Ingolf &mdash; &laquo;Klokkar-Ingolf&raquo; &mdash; tok over i 1927, &Aring;sbj&oslash;rg og H&aring;kon i 1959, Hallgeir i 1983, og Ingar i 2020.</p>
       <p>I dag driv vi garden vidare med same haldning som dei f&oslash;r oss: godt handverk, godt dyrehald og respekt for det som er ekte. Det du finn hos oss, kjem herifr&aring;.</p>
+      <div class="tidslinje" aria-label="Eigarrekkja p&aring; Klokkargarden">
+        <span>1860</span><span>1900</span><span>1927</span><span>1959</span><span>1983</span><span>2020</span>
+      </div>
       <figure class="arkiv">
         <video controls preload="none" playsinline poster="assets/historia-poster.jpg">
           <source src="assets/historia.mp4" type="video/mp4">
         </video>
         <figcaption>&Aring;sbj&oslash;rg (Grimstad) Teigene og Klokkar-Ingolf<br>&mdash; fr&aring; familiearkivet &mdash;</figcaption>
       </figure>
-      <div class="anno"><span>Anno 1864</span></div>
+      <div class="anno"><span>Anno 1860</span></div>
     </div>
   </section>
 
@@ -496,7 +523,7 @@
 </main>
 
 <footer>
-  <div class="anno"><span>Anno 1864</span></div>
+  <div class="anno"><span>Anno 1860</span></div>
   <p class="copyright">&copy; Klokkargarden</p>
 </footer>
 
