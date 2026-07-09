@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Klokkargarden — Gard og gardsbutikk på Hareid, sidan 1860</title>
-<meta name="description" content="Klokkargarden på Hareid — ferske egg og ekte gardsdrift på Sunnmøre sidan 1860. Sjølvbetent gardsbutikk, open heile veka.">
+<meta name="description" content="Klokkargarden på Hareid — ferske egg og ekte gardsdrift på Sunnmøre sidan 1860. Sjølvbetent gardsbutikk, døgnopen 365 dagar i året.">
 <link rel="canonical" href="https://klokkargarden.com/">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Klokkargarden">
 <meta property="og:title" content="Klokkargarden — Gard og gardsbutikk på Hareid, sidan 1860">
-<meta property="og:description" content="Ferske egg og ekte gardsdrift på Sunnmøre sidan 1860. Sjølvbetent gardsbutikk ved Hareidsvegen — open heile veka, betal med Vipps.">
+<meta property="og:description" content="Ferske egg og ekte gardsdrift på Sunnmøre sidan 1860. Sjølvbetent gardsbutikk ved Hareidsvegen — døgnopen 365 dagar i året, betal med Vipps.">
 <meta property="og:url" content="https://klokkargarden.com/">
 <meta property="og:image" content="https://klokkargarden.com/assets/og-bilete.jpg">
 <meta property="og:image:width" content="1200">
@@ -26,8 +26,14 @@
   "taxID": "899589572",
   "url": "https://klokkargarden.com/",
   "image": "https://klokkargarden.com/assets/og-bilete.jpg",
-  "description": "Gardsbutikk med ferske egg frå eigen gard på Hareid, Sunnmøre. Sjølvbetent og open heile veka.",
+  "description": "Gardsbutikk med ferske egg frå eigen gard på Hareid, Sunnmøre. Sjølvbetent og døgnopen, 365 dagar i året.",
   "foundingDate": "1860",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Hareidsvegen",
@@ -411,6 +417,35 @@
     .bilderekke { grid-template-columns: 1fr; gap: 2rem; max-width: 480px; }
   }
 
+  .merker {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 640px;
+    margin: 4rem auto 0;
+    text-align: left;
+  }
+  .merke {
+    border-top: 1px solid var(--gold);
+    padding-top: 1.1rem;
+  }
+  .merke strong {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brg);
+    margin-bottom: 0.35rem;
+  }
+  .merke span {
+    font-size: 0.92rem;
+    color: rgba(28, 28, 26, 0.72);
+  }
+  @media (max-width: 700px) {
+    .merker { grid-template-columns: 1fr; gap: 2rem; max-width: 480px; }
+  }
+
   .section p.punchline {
     margin-top: 2.5rem;
     text-align: center;
@@ -583,7 +618,7 @@
     <div class="section-inner">
       <span class="eyebrow reveal">Gardsbutikken</span>
       <h2 class="reveal">Kortreist. Ferskt. Fr&aring; garden.</h2>
-      <p>I gardsbutikken finn du ferske egg fr&aring; h&oslash;nene v&aring;re &mdash; plukka, sorterte og lagde fram same dagen. Butikken er open heile veka, og du betaler enkelt med Vipps.</p>
+      <p>I gardsbutikken finn du ferske egg fr&aring; h&oslash;nene v&aring;re &mdash; plukka, sorterte og lagde fram same dagen. Butikken er d&oslash;gnopen, 365 dagar i &aring;ret, og du betaler enkelt med Vipps.</p>
     </div>
     <div class="info-row">
       <div class="info-item">
@@ -591,8 +626,8 @@
         <span>Fr&aring; h&oslash;nseriet, kvar dag</span>
       </div>
       <div class="info-item">
-        <strong>Ope heile veka</strong>
-        <span>Sj&oslash;lvbetent gardsbutikk</span>
+        <strong>D&oslash;gnope</strong>
+        <span>Sj&oslash;lvbetent, 365 dagar i &aring;ret</span>
       </div>
       <div class="info-item">
         <strong>Betal med Vipps</strong>
@@ -605,8 +640,8 @@
     <div class="section-inner">
       <span class="eyebrow reveal">Egga v&aring;re</span>
       <h2 class="reveal">Kvalitet du smakar</h2>
-      <p>I Klokkargarden har vi ein lidenskap for ferske og kortreiste matvarer. Egga v&aring;re er produserte lokalt, og med eit naturleg, eigenutvikla spesialf&ocirc;r gir vi h&oslash;nene den beste n&aelig;ringa dei kan f&aring;. Det er dette som gir den reine, gode smaken egga v&aring;re har blitt s&aring; kjende for.</p>
-      <p>H&oslash;nene v&aring;re g&aring;r fritt, b&aring;de h&oslash;gt og l&aring;gt. Dei kan &laquo;bade&raquo; i str&oslash;et, vagle seg i h&oslash;gda eller trekkje seg tilbake i eit av reira &mdash; heilt som dei vil. Trivsel gir gode egg.</p>
+      <p>I Klokkargarden har vi ein lidenskap for ferske og kortreiste matvarer. Egga v&aring;re er produserte lokalt, og med eit naturleg, eigenutvikla spesialf&ocirc;r gir vi h&oslash;nene den beste n&aelig;ringa dei kan f&aring; &mdash; i den opphavlege oppskrifta var det innblandinga av paprika og tagetes som til slutt kalibrerte den karakteristiske fargen p&aring; plomma. Det er dette som gir den reine, gode smaken egga v&aring;re har blitt s&aring; kjende for.</p>
+      <p>Dei 15&nbsp;167 h&oslash;nene v&aring;re g&aring;r fritt, b&aring;de h&oslash;gt og l&aring;gt. Dei kan &laquo;bade&raquo; i str&oslash;et, vagle seg i h&oslash;gda eller trekkje seg tilbake i eit av reira &mdash; heilt som dei vil. Trivsel gir gode egg.</p>
       <p>Fr&aring; bakverk til frukostbord: egg fr&aring; Klokkargarden passar like godt uansett kva du lagar.</p>
     </div>
     <div class="bilderekke">
@@ -626,13 +661,23 @@
     <div class="section-inner">
       <p class="punchline">Etter meir enn 100 &aring;r med samanhengande eggproduksjon p&aring; garden kan vi med handa p&aring; hjartet seie &eacute;in ting &mdash; gulare blir dei ikkje.</p>
     </div>
+    <div class="merker">
+      <div class="merke">
+        <strong>KSL-godkjend</strong>
+        <span>Kvalitetssystemet i landbruket &mdash; med godkjend dyrevelferdsprogram</span>
+      </div>
+      <div class="merke">
+        <strong>Godkjend Lokalmat</strong>
+        <span>Registrert Lokalmat-produsent gjennom Sunnm&oslash;rsegg AS</span>
+      </div>
+    </div>
   </section>
 
   <section class="section on-green" id="kontakt" style="padding-bottom: 6rem;">
     <div class="section-inner">
       <span class="eyebrow reveal">Finn oss</span>
       <h2 class="reveal">Velkomen til gards</h2>
-      <p style="text-align:center;">Gardsbutikken ligg like ved hovudvegen gjennom Hareid &mdash; godt synleg fr&aring; vegen og med enkel tilkomst. Butikken er sj&oslash;lvbetent og open heile veka, s&aring; kom innom n&aring;r det passar deg.</p>
+      <p style="text-align:center;">Gardsbutikken ligg like ved hovudvegen gjennom Hareid &mdash; godt synleg fr&aring; vegen og med enkel tilkomst. Butikken er sj&oslash;lvbetent og d&oslash;gnopen, 365 dagar i &aring;ret &mdash; kom innom n&aring;r det passar deg.</p>
       <p class="adresse" style="text-align:center;">Klokkargarden &middot; Hareidsvegen, 6060 Hareid</p>
       <div class="kontakt-lenker">
         <a class="lenke-sek" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Opne i kart</a>
