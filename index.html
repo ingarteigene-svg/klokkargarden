@@ -5,6 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Klokkargarden — Gard og gardsbutikk på Hareid, sidan 1860</title>
 <meta name="description" content="Klokkargarden på Hareid — ferske egg og ekte gardsdrift på Sunnmøre sidan 1860. Sjølvbetent gardsbutikk, open heile veka.">
+<link rel="canonical" href="https://klokkargarden.com/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Klokkargarden">
+<meta property="og:title" content="Klokkargarden — Gard og gardsbutikk på Hareid, sidan 1860">
+<meta property="og:description" content="Ferske egg og ekte gardsdrift på Sunnmøre sidan 1860. Sjølvbetent gardsbutikk ved Hareidsvegen — open heile veka, betal med Vipps.">
+<meta property="og:url" content="https://klokkargarden.com/">
+<meta property="og:image" content="https://klokkargarden.com/assets/og-bilete.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="nn_NO">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Klokkargarden",
+  "legalName": "Klokkargarden AS",
+  "taxID": "899589572",
+  "url": "https://klokkargarden.com/",
+  "image": "https://klokkargarden.com/assets/og-bilete.jpg",
+  "description": "Gardsbutikk med ferske egg frå eigen gard på Hareid, Sunnmøre. Sjølvbetent og open heile veka.",
+  "foundingDate": "1860",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hareidsvegen",
+    "postalCode": "6060",
+    "addressLocality": "Hareid",
+    "addressCountry": "NO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 62.3740137,
+    "longitude": 6.0273608
+  },
+  "sameAs": ["https://www.facebook.com/klokkargard1"],
+  "paymentAccepted": "Vipps"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -16,6 +55,7 @@
     --ink:   #1C1C1A;
     --white: #FFFFFF;
     --gold-on-green: #C9A227; /* gull må lysnast marginalt på mørk grøn for lesbarheit i små grader */
+    --gold-ink: #7A6000; /* mørkna gull for liten tekst på lyse flater — WCAG-kontrast; linjer/border held --gold */
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -51,7 +91,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    color: var(--gold);
+    color: var(--gold-ink);
   }
   .anno::before,
   .anno::after {
@@ -67,9 +107,11 @@
     text-transform: uppercase;
   }
   .on-green .anno,
-  .hero .anno { color: var(--gold-on-green); }
+  .hero .anno,
+  footer .anno { color: var(--gold-on-green); }
   .on-green .anno::before, .on-green .anno::after,
-  .hero .anno::before, .hero .anno::after { background: var(--gold-on-green); }
+  .hero .anno::before, .hero .anno::after,
+  footer .anno::before, footer .anno::after { background: var(--gold-on-green); }
 
   .section {
     padding: 8rem 1.5rem;
@@ -79,7 +121,7 @@
     margin: 0 auto;
     text-align: center;
   }
-  .section .eyebrow { color: var(--gold); margin-bottom: 1.5rem; }
+  .section .eyebrow { color: var(--gold-ink); margin-bottom: 1.5rem; }
   .section h2 {
     font-weight: 700;
     font-size: clamp(1.9rem, 4vw, 2.6rem);
@@ -298,7 +340,7 @@
     text-transform: uppercase;
     line-height: 1.7;
     text-align: center;
-    color: var(--gold);
+    color: var(--gold-ink);
   }
   @media (max-width: 700px) {
     .tidslinje {
@@ -362,7 +404,7 @@
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold-ink);
     text-align: center;
   }
   @media (max-width: 700px) {
@@ -387,7 +429,7 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     line-height: 2;
-    color: var(--gold);
+    color: var(--gold-ink);
     text-align: center;
   }
 
@@ -603,7 +645,7 @@
 
 <footer>
   <div class="anno"><span>Anno 1860</span></div>
-  <p class="copyright">&copy; Klokkargarden</p>
+  <p class="copyright">&copy; Klokkargarden &middot; Klokkargarden AS &middot; Org.nr 899 589 572</p>
 </footer>
 
 <script>
