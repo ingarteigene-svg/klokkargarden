@@ -181,25 +181,26 @@
     display: flex;
     gap: 2rem;
   }
+  .nav-ikon {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
   .ring {
     display: flex;
     align-items: center;
-    gap: 0.55rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-decoration: none;
+    justify-content: center;
+    padding: 0.5rem;
     transition: color 0.25s ease;
   }
   .ring svg {
-    width: 18px;
-    height: 18px;
+    width: 19px;
+    height: 19px;
     flex-shrink: 0;
   }
   .ring:hover { color: var(--gold-on-green); }
   @media (max-width: 700px) {
-    .ring span { display: none; }
-    .ring { padding: 0.5rem; margin-right: -0.5rem; }
+    .nav-ikon { margin-right: -0.5rem; }
     .ring svg { width: 21px; height: 21px; }
   }
   .nav-links a {
@@ -625,10 +626,14 @@
       <a href="#egga">Egga</a>
       <a href="#kontakt">Kontakt</a>
     </div>
-    <a class="ring" href="tel:+4790081775" aria-label="Ring Klokkargarden, 900 81 775">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
-      <span>900 81 775</span>
-    </a>
+    <div class="nav-ikon">
+      <a class="ring" href="tel:+4790081775" aria-label="Ring Klokkargarden, 900 81 775">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+      </a>
+      <a class="ring" href="mailto:post@klokkargarden.com" aria-label="Send e-post til post@klokkargarden.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4.5" width="20" height="15"/><polyline points="2,6.5 12,13.5 22,6.5"/></svg>
+      </a>
+    </div>
   </div>
 </nav>
 
