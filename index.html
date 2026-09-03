@@ -7,6 +7,8 @@
 <meta name="description" content="Klokkargarden på Hareid — ferske egg og ekte gardsdrift på Sunnmøre sidan 1860. Sjølvbetent gardsbutikk, døgnopen 365 dagar i året.">
 <link rel="canonical" href="https://klokkargarden.com/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#004225">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Klokkargarden">
 <meta property="og:title" content="Klokkargarden — Gard og gardsbutikk på Hareid, sidan 1860">
@@ -26,6 +28,7 @@
   "taxID": "899589572",
   "url": "https://klokkargarden.com/",
   "image": "https://klokkargarden.com/assets/og-bilete.jpg",
+  "logo": "https://klokkargarden.com/assets/logo-512.png",
   "description": "Gardsbutikk med ferske egg frå eigen gard på Hareid, Sunnmøre. Sjølvbetent og døgnopen, 365 dagar i året.",
   "foundingDate": "1860",
   "openingHoursSpecification": {
@@ -122,7 +125,15 @@
   footer .anno::before, footer .anno::after { background: var(--gold-on-green); }
 
   .section {
-    padding: 8rem 1.5rem;
+    padding: 6.5rem 1.5rem;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+  nav a:focus-visible, .hero a:focus-visible, .on-green a:focus-visible, footer a:focus-visible {
+    outline-color: var(--gold-on-green);
   }
   .section-inner {
     max-width: 640px;
@@ -245,7 +256,9 @@
     position: absolute;
     inset: 0;
     /* 0.7 (ikke briefens 0.55): råvideoen er svært lys — kontrastkravet for hvit tekst styrer */
+    /* radiell mørkning bak tekstblokka: gullteksten treng ro mot dei kvite hønene */
     background:
+      radial-gradient(ellipse 42% 38% at 50% 52%, rgba(0,28,16,0.5) 0%, rgba(0,28,16,0) 100%),
       linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,20,11,0.45) 100%),
       rgba(0,66,37,0.7);
   }
@@ -451,7 +464,9 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    background: #E3E9DE; /* plassholdar medan lazy-bilete lastar */
   }
+  .arkiv img { background: #E3E9DE; }
   .bilderekke figcaption {
     margin-top: 0.85rem;
     font-size: 0.7rem;
@@ -791,7 +806,7 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.4 });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });

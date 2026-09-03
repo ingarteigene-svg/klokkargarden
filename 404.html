@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sida finst ikkje — Klokkargarden</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#004225">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: #004225;
+    color: #FFFFFF;
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .logo { height: 48px; width: auto; margin-bottom: 4rem; }
+  .eyebrow {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #C9A227;
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  p { max-width: 30em; font-size: 1.1rem; margin-bottom: 3rem; }
+  .cta {
+    display: inline-block;
+    padding: 0.95rem 2.4rem;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .cta:hover { background: #FFFFFF; color: #004225; }
+  .cta:focus-visible { outline: 2px solid #C9A227; outline-offset: 3px; }
+  .anno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 5rem;
+    color: #C9A227;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .anno::before, .anno::after { content: ""; width: 40px; height: 1px; background: #C9A227; }
+</style>
+</head>
+<body>
+  <img class="logo" src="/assets/logo.svg" alt="Klokkargarden — Anno 1860">
+  <span class="eyebrow">Sida finst ikkje</span>
+  <h1>Her er det ingen egg &aring; finne</h1>
+  <p>Adressa du gjekk til, finst ikkje p&aring; Klokkargarden. Men garden er der framleis &mdash; og gardsbutikken er open d&oslash;gnet rundt.</p>
+  <a class="cta" href="/">Til framsida</a>
+  <div class="anno"><span>Anno 1860</span></div>
+</body>
+</html>
