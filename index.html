@@ -480,6 +480,87 @@
     .bilderekke { grid-template-columns: 1fr; gap: 2rem; max-width: 480px; }
   }
 
+  /* ---------- Nøkkeltal-stripe ---------- */
+
+  .tal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2.75rem 1.5rem;
+  }
+  .tal-item {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-left: 1px solid var(--gold);
+  }
+  .tal-item:first-child { border-left: 0; }
+  .tal-item strong {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+    line-height: 1.1;
+    color: var(--brg);
+    margin-bottom: 0.45rem;
+  }
+  .tal-item span {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+  }
+  @media (max-width: 700px) {
+    .tal { grid-template-columns: 1fr 1fr; row-gap: 2rem; padding: 2.5rem 1rem; }
+    .tal-item:nth-child(3) { border-left: 0; }
+  }
+
+  /* ---------- Kundeomtalar ---------- */
+
+  .omtalar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 960px;
+    margin: 5rem auto 0;
+  }
+  .omtale {
+    border-top: 1px solid var(--gold);
+    padding-top: 1.5rem;
+    text-align: left;
+  }
+  .omtale::before {
+    content: "\201C";
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 3rem;
+    line-height: 0.6;
+    color: var(--gold);
+    margin-bottom: 0.9rem;
+  }
+  .omtale p {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--brg);
+    margin: 0 0 1rem;
+    max-width: none;
+  }
+  .omtale cite {
+    font-style: normal;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+  }
+  @media (max-width: 700px) {
+    .omtalar { grid-template-columns: 1fr; gap: 2.25rem; max-width: 480px; }
+  }
+
   /* ---------- Signatur: plomma mot mørk grøn ---------- */
 
   .signatur {
@@ -634,10 +715,48 @@
 
   footer {
     background: var(--brg);
-    padding: 0 1.5rem 3rem;
+    color: var(--white);
+    padding: 5rem 1.5rem 3rem;
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 960px;
+    margin: 0 auto 4rem;
+  }
+  .footer-logo { display: block; height: 40px; width: auto; margin-bottom: 1.25rem; }
+  .footer-kol h3 {
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-on-green);
+    margin-bottom: 1rem;
+  }
+  .footer-kol p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.82);
+  }
+  .footer-kol a {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-on-green);
+    transition: color 0.25s ease;
+  }
+  .footer-kol a:hover { color: var(--gold-on-green); }
+  .footer-botn {
     text-align: center;
+    border-top: 1px solid rgba(201, 162, 39, 0.35);
+    padding-top: 2.5rem;
   }
   footer .anno { margin-bottom: 2rem; }
+  @media (max-width: 700px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 2.25rem; text-align: center; }
+    .footer-logo { margin-left: auto; margin-right: auto; }
+  }
   .copyright {
     font-size: 0.7rem;
     font-weight: 600;
@@ -708,6 +827,13 @@
 </header>
 
 <main>
+
+  <div class="tal" aria-label="N&oslash;kkeltal for Klokkargarden">
+    <div class="tal-item"><strong>1860</strong><span>Klokkaren fekk sk&oslash;yte</span></div>
+    <div class="tal-item"><strong>6</strong><span>Generasjonar</span></div>
+    <div class="tal-item"><strong>15&nbsp;167</strong><span>H&oslash;ner</span></div>
+    <div class="tal-item"><strong>365</strong><span>Dagar open i &aring;ret</span></div>
+  </div>
 
   <section class="section historia" id="historia">
     <div class="section-inner">
@@ -799,6 +925,20 @@
         <span>Registrert Lokalmat-produsent gjennom Sunnm&oslash;rsegg AS</span>
       </div>
     </div>
+    <div class="omtalar" aria-label="Kundeomtalar">
+      <figure class="omtale">
+        <p>M&oslash;kje gode ferske egg rett fr&aring; h&oslash;n&aring;.</p>
+        <cite>Kunde, via Facebook</cite>
+      </figure>
+      <figure class="omtale">
+        <p>Dei beste egga f&aring;r vi hj&aring; dokke.</p>
+        <cite>Kunde, via Facebook</cite>
+      </figure>
+      <figure class="omtale">
+        <p>Veldig gode egg. Litt lang veg &aring; k&oslash;yre fr&aring; Fosnav&aring;gen, men er innom av og til.</p>
+        <cite>Kunde fr&aring; Fosnav&aring;g, via Facebook</cite>
+      </figure>
+    </div>
   </section>
 
   <section class="signatur" aria-label="Klokkargarden Egg">
@@ -827,8 +967,24 @@
 </main>
 
 <footer>
-  <div class="anno"><span>Anno 1860</span></div>
-  <p class="copyright">&copy; Klokkargarden &middot; Klokkargarden AS &middot; Org.nr 899 589 572</p>
+  <div class="footer-inner">
+    <div class="footer-kol">
+      <img class="footer-logo" src="assets/logo.svg" alt="Klokkargarden &mdash; Anno 1860">
+      <p>Gard og gardsbutikk p&aring; Hareid &mdash; i same slekta sidan 1860.</p>
+    </div>
+    <div class="footer-kol">
+      <h3>Finn oss</h3>
+      <p>Hareidsvegen, 6060 Hareid<br><a href="tel:+4790081775">900 81 775</a><br><a href="mailto:post@klokkargarden.com">post@klokkargarden.com</a></p>
+    </div>
+    <div class="footer-kol">
+      <h3>Gardsbutikken</h3>
+      <p>D&oslash;gnopen, 365 dagar i &aring;ret<br>Sj&oslash;lvbetent &middot; Betal med Vipps<br><a href="https://www.facebook.com/klokkargard1" target="_blank" rel="noopener">F&oslash;lg oss p&aring; Facebook</a></p>
+    </div>
+  </div>
+  <div class="footer-botn">
+    <div class="anno"><span>Anno 1860</span></div>
+    <p class="copyright">&copy; Klokkargarden &middot; Klokkargarden AS &middot; Org.nr 899 589 572</p>
+  </div>
 </footer>
 
 <script>
