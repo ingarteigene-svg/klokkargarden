@@ -480,6 +480,44 @@
     .bilderekke { grid-template-columns: 1fr; gap: 2rem; max-width: 480px; }
   }
 
+  /* ---------- Signatur: plomma mot mørk grøn ---------- */
+
+  .signatur {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--brg);
+    color: var(--white);
+    border-bottom: 1px solid var(--gold-on-green);
+  }
+  .signatur img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 460px;
+    max-height: 600px;
+    object-fit: cover;
+  }
+  .signatur-tekst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 7vw;
+  }
+  .signatur-tekst .eyebrow { color: var(--gold-on-green); margin-bottom: 1.75rem; }
+  .signatur-tekst p {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.4rem, 2.1vw, 1.85rem);
+    line-height: 1.5;
+    max-width: 19em;
+  }
+  @media (max-width: 800px) {
+    .signatur { grid-template-columns: 1fr; }
+    .signatur img { min-height: 0; aspect-ratio: 4 / 3; }
+    .signatur-tekst { padding: 3.5rem 1.5rem 4.5rem; }
+  }
+
   .segl {
     display: block;
     width: 68px;
@@ -738,8 +776,8 @@
     </div>
     <div class="bilderekke">
       <figure>
-        <img src="assets/egg-panne.jpg" alt="Fire stekte egg i panna med djupt oransje plommer" loading="lazy">
-        <figcaption>Plommer med farge</figcaption>
+        <img src="assets/is-rabarbra.jpg" alt="Heimelaga is med rabarbra ved sida av ei gammal kj&oslash;kkenvekt" loading="lazy">
+        <figcaption>Heimelaga is og rabarbra</figcaption>
       </figure>
       <figure>
         <img src="assets/egg-brett.jpg" alt="Ferske kvite egg i brett, sett ovanfr&aring;" loading="lazy">
@@ -750,9 +788,6 @@
         <figcaption>Heimelaga karamellpudding</figcaption>
       </figure>
     </div>
-    <div class="section-inner">
-      <p class="punchline">Etter meir enn 100 &aring;r med samanhengande eggproduksjon p&aring; garden kan vi med handa p&aring; hjartet seie &eacute;in ting &mdash; gulare blir dei ikkje.</p>
-    </div>
     <div class="merker">
       <div class="merke">
         <strong>KSL-godkjend</strong>
@@ -762,6 +797,14 @@
         <strong>Godkjend Lokalmat</strong>
         <span>Registrert Lokalmat-produsent gjennom Sunnm&oslash;rsegg AS</span>
       </div>
+    </div>
+  </section>
+
+  <section class="signatur" aria-label="Klokkargarden Egg">
+    <img src="assets/plomme-stor.jpg" alt="Stekte egg med djupt oransje plommer" loading="lazy">
+    <div class="signatur-tekst">
+      <span class="eyebrow">Klokkargarden Egg</span>
+      <p>Etter meir enn 100 &aring;r med samanhengande eggproduksjon p&aring; garden kan vi med handa p&aring; hjartet seie &eacute;in ting &mdash; gulare blir dei ikkje.</p>
     </div>
   </section>
 
