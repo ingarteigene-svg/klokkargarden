@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="nn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klokkargarden — prøveversjon i Apple-stil</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1d1d1f;
+    --sec: #6e6e73;
+    --gray: #f5f5f7;
+    --white: #ffffff;
+    --black: #000000;
+    --brg: #004225;
+    --link: #0066cc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.47;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.012em;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img, video { display: block; max-width: 100%; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    height: 48px;
+    display: flex; align-items: center; justify-content: center; gap: 2.6rem;
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    font-size: 12px; letter-spacing: -0.01em;
+  }
+  nav a { color: var(--ink); opacity: 0.85; }
+  nav a:hover { opacity: 1; text-decoration: none; }
+  nav .merke { font-weight: 600; font-size: 14px; opacity: 1; }
+  @media (max-width: 700px) { nav { gap: 1.2rem; font-size: 11px; } nav .skjul { display: none; } }
+
+  /* Hero */
+  .hero { text-align: center; padding: 6.5rem 1.5rem 0; background: var(--white); }
+  .hero h1 { font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+  .hero h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 400; color: var(--sec); margin-top: 0.6rem; letter-spacing: -0.015em; }
+  .hero .lenker { margin: 1.4rem 0 3rem; font-size: 1.15rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+  .hero .lenker a::after { content: " ›"; }
+  .hero-media { max-width: 1200px; margin: 0 auto; border-radius: 28px 28px 0 0; overflow: hidden; aspect-ratio: 16 / 8; background: #000; }
+  .hero-media video { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 700px) { .hero-media { aspect-ratio: 4 / 5; border-radius: 20px 20px 0 0; } }
+
+  /* Seksjonar */
+  .sek { padding: 7rem 1.5rem; }
+  .sek.gra { background: var(--gray); }
+  .sek.svart { background: var(--black); color: var(--white); }
+  .sek.svart .sec { color: #a1a1a6; }
+  .inner { max-width: 980px; margin: 0 auto; }
+  .sek h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; text-align: center; }
+  .sek .ingress { font-size: clamp(1.15rem, 2vw, 1.5rem); color: var(--sec); text-align: center; max-width: 34em; margin: 1rem auto 0; font-weight: 400; }
+  .sek p.brod { font-size: 1.1rem; color: var(--sec); max-width: 40em; margin: 1.2rem auto 0; text-align: center; }
+
+  /* Bento-fliser */
+  .bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3.5rem; }
+  .flis { background: var(--white); border-radius: 22px; padding: 2rem 1.5rem; text-align: center; }
+  .svart .flis { background: #1d1d1f; }
+  .flis strong { display: block; font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+  .flis span { display: block; margin-top: 0.6rem; font-size: 0.95rem; color: var(--sec); }
+  .svart .flis span { color: #a1a1a6; }
+  @media (max-width: 700px) { .bento { grid-template-columns: 1fr 1fr; } }
+
+  /* Bildepar */
+  .par { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3.5rem; }
+  .par figure { border-radius: 22px; overflow: hidden; background: #1d1d1f; }
+  .par img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .par figcaption { padding: 1rem 1.25rem 1.2rem; font-size: 0.9rem; color: #a1a1a6; }
+  @media (max-width: 700px) { .par { grid-template-columns: 1fr; } }
+
+  /* Tidslinje */
+  .tid { display: flex; justify-content: space-between; margin: 3rem auto 0; max-width: 820px; gap: 0.5rem; flex-wrap: wrap; }
+  .tid div { text-align: center; flex: 1 1 100px; }
+  .tid strong { display: block; font-size: 1.4rem; font-weight: 600; letter-spacing: -0.02em; }
+  .tid span { font-size: 0.8rem; color: #a1a1a6; }
+
+  /* Bilderekke */
+  .rekke { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3.5rem; }
+  .rekke figure { border-radius: 22px; overflow: hidden; background: var(--white); }
+  .rekke img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+  .rekke figcaption { padding: 0.9rem 1.2rem 1.1rem; font-size: 0.9rem; color: var(--sec); }
+  @media (max-width: 700px) { .rekke { grid-template-columns: 1fr; } }
+
+  /* Signatur */
+  .sig { position: relative; background: var(--black); color: var(--white); text-align: center; overflow: hidden; }
+  .sig img { width: 100%; max-height: 720px; object-fit: cover; opacity: 0.85; }
+  .sig .tekst { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0) 60%); }
+  .sig h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; max-width: 14em; text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+
+  /* Omtalar */
+  .omt { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3.5rem; }
+  .omt figure { background: var(--white); border-radius: 22px; padding: 1.8rem 1.6rem; }
+  .omt p { font-size: 1.15rem; font-weight: 500; letter-spacing: -0.015em; line-height: 1.4; }
+  .omt cite { display: block; font-style: normal; font-size: 0.85rem; color: var(--sec); margin-top: 1rem; }
+  @media (max-width: 700px) { .omt { grid-template-columns: 1fr; } }
+
+  /* Merker */
+  .merker { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; }
+  .merker span { background: var(--white); border-radius: 999px; padding: 0.6rem 1.2rem; font-size: 0.9rem; font-weight: 500; }
+
+  /* Kontakt / CTA */
+  .cta { text-align: center; padding: 7rem 1.5rem; }
+  .cta h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -0.03em; }
+  .cta p { font-size: 1.15rem; color: var(--sec); margin-top: 1rem; }
+  .knapp { display: inline-block; margin-top: 2rem; background: var(--brg); color: var(--white); padding: 0.9rem 1.8rem; border-radius: 999px; font-size: 1.05rem; font-weight: 500; }
+  .knapp:hover { text-decoration: none; opacity: 0.9; }
+  .cta .lenker { margin-top: 1.5rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 1.05rem; }
+  .cta .lenker a::after { content: " ›"; }
+
+  footer { background: var(--gray); padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--sec); }
+  footer .inner { border-top: 1px solid #d2d2d7; padding-top: 1.2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  footer a { color: var(--sec); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="merke" href="#">Klokkargarden</a>
+  <a href="#historia">Historia</a>
+  <a href="#gardsbutikken">Gardsbutikken</a>
+  <a href="#egga">Egga</a>
+  <a class="skjul" href="#kontakt">Kontakt</a>
+</nav>
+
+<header class="hero">
+  <h1>Klokkargarden.</h1>
+  <h2>Ferske egg fr&aring; Hareid. Sidan 1860.</h2>
+  <div class="lenker">
+    <a href="#gardsbutikken">Bes&oslash;k gardsbutikken</a>
+    <a href="#historia">Les historia</a>
+  </div>
+  <div class="hero-media">
+    <video autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video>
+  </div>
+</header>
+
+<section class="sek gra">
+  <div class="inner">
+    <h2>Same slekta. Same jorda.<br>I 165 &aring;r.</h2>
+    <p class="ingress">Ein gard som har g&aring;tt fr&aring; hand til hand sidan klokkaren fekk sk&oslash;yte i 1860.</p>
+    <div class="bento">
+      <div class="flis"><strong>1860</strong><span>Klokkaren fekk sk&oslash;yte</span></div>
+      <div class="flis"><strong>6</strong><span>Generasjonar</span></div>
+      <div class="flis"><strong>15&nbsp;167</strong><span>H&oslash;ner</span></div>
+      <div class="flis"><strong>24/7</strong><span>Open 365 dagar i &aring;ret</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sek svart" id="historia">
+  <div class="inner">
+    <h2>Ein gard med r&oslash;ter.</h2>
+    <p class="ingress sec">Lars Hareide var klokkaren i bygda. Difor Klokkargarden. Fr&aring; Elias i 1900 har garden g&aring;tt i beint nedstigande linje &mdash; til Ingar og Elisabeth i dag.</p>
+    <div class="par">
+      <figure><img src="assets/tunet-1905.jpg" alt=""><figcaption>Gardstunet og hovudhuset, kring 1905&ndash;1910</figcaption></figure>
+      <figure><img src="assets/huset-2026.jpg" alt=""><figcaption>Hovudhuset i dag &mdash; og gardshunden Zelda</figcaption></figure>
+    </div>
+    <div class="tid">
+      <div><strong>1860</strong><span>Lars</span></div>
+      <div><strong>1900</strong><span>Elias</span></div>
+      <div><strong>1927</strong><span>Klokkar-Ingolf</span></div>
+      <div><strong>1959</strong><span>&Aring;sbj&oslash;rg og H&aring;kon</span></div>
+      <div><strong>1983</strong><span>Hallgeir og Marianne</span></div>
+      <div><strong>2017</strong><span>Ingar og Elisabeth</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="gardsbutikken">
+  <div class="inner">
+    <h2>D&oslash;gnopen. Sj&oslash;lvbetent.<br>365 dagar i &aring;ret.</h2>
+    <p class="ingress">Ferske egg plukka, sorterte og lagde fram same dagen. Betal enkelt med Vipps.</p>
+    <p class="brod">Gardsbutikken ligg like ved hovudvegen gjennom Hareid &mdash; godt synleg fr&aring; vegen og med enkel tilkomst.</p>
+  </div>
+</section>
+
+<section class="sek gra" id="egga">
+  <div class="inner">
+    <h2>Rik p&aring; jod.<br>Dokumentert.</h2>
+    <p class="ingress">Eit eigenutvikla spesialf&ocirc;r med paprika, tagetes og tilsett jod. Laboratorieanalysar viser 50&nbsp;&micro;g jod per 100&nbsp;g &mdash; to egg gir om lag ein tredel av dagleg referanseinntak.</p>
+    <div class="rekke">
+      <figure><img src="assets/is-rabarbra.jpg" alt=""><figcaption>Heimelaga is og rabarbra</figcaption></figure>
+      <figure><img src="assets/egg-brett.jpg" alt=""><figcaption>Ferske fr&aring; reiret</figcaption></figure>
+      <figure><img src="assets/karamellpudding.jpg" alt=""><figcaption>Heimelaga karamellpudding</figcaption></figure>
+    </div>
+    <div class="merker">
+      <span>KSL-godkjend</span><span>Godkjend dyrevelferdsprogram</span><span>Godkjend Lokalmat</span><span>Frittg&aring;ande h&oslash;ner</span>
+    </div>
+  </div>
+</section>
+
+<section class="sig">
+  <img src="assets/plomme-stor.jpg" alt="">
+  <div class="tekst"><h2>Etter meir enn 100 &aring;r med egg: gulare blir dei ikkje.</h2></div>
+</section>
+
+<section class="sek gra">
+  <div class="inner">
+    <h2>Kundane seier det best.</h2>
+    <div class="omt">
+      <figure><p>&laquo;M&oslash;kje gode ferske egg rett fr&aring; h&oslash;n&aring;.&raquo;</p><cite>Kunde, via Facebook</cite></figure>
+      <figure><p>&laquo;Dei beste egga f&aring;r vi hj&aring; dokke.&raquo;</p><cite>Kunde, via Facebook</cite></figure>
+      <figure><p>&laquo;Supre flotte egg, finst ikkje maken &mdash; og s&aring; n&aelig;r produsert!&raquo;</p><cite>Kunde, via Facebook</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="kontakt">
+  <h2>Velkomen til gards.</h2>
+  <p>Klokkargarden &middot; Hareidsvegen, 6060 Hareid</p>
+  <a class="knapp" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Opne i kart</a>
+  <div class="lenker">
+    <a href="tel:+4790081775">900 81 775</a>
+    <a href="mailto:post@klokkargarden.com">post@klokkargarden.com</a>
+    <a href="https://www.facebook.com/klokkargard1" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <span>&copy; Klokkargarden AS &middot; Org.nr 899 589 572</span>
+    <span>Pr&oslash;veversjon i Apple-stil &mdash; ikkje publisert</span>
+  </div>
+</footer>
+
+</body>
+</html>
