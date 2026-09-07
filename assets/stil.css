@@ -155,21 +155,21 @@ footer .anno::before, footer .anno::after { background: var(--gold-on-green); }
   justify-content: center;
   padding: 5rem 6vw 4rem 5vw;
 }
-.hero-tekst .eyebrow { margin-bottom: 1.6rem; }
+.hero-tekst .eyebrow { font-size: 0.85rem; margin-bottom: 2rem; }
 .hero-tekst h1 {
   font-weight: 700;
-  font-size: clamp(2.8rem, 5.4vw, 4.6rem);
-  letter-spacing: -0.015em;
-  line-height: 1.05;
+  font-size: clamp(2.8rem, 6.3vw, 7.2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.02;
   color: var(--brg);
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
 }
-.hero-tekst .ingress { font-size: 1.1rem; max-width: 26em; margin-bottom: 2rem; }
-.hero-tekst .knapp { align-self: flex-start; margin-bottom: 1.4rem; }
-.hero-tekst .lenke { align-self: flex-start; }
+.hero-tekst .ingress { font-size: clamp(1.15rem, 1.5vw, 1.6rem); line-height: 1.5; max-width: 24em; margin-bottom: 2.4rem; }
+.hero-tekst .knapp { align-self: flex-start; margin-bottom: 1.6rem; padding: 1.15rem 2.2rem; font-size: clamp(1rem, 1.15vw, 1.2rem); }
+.hero-tekst .lenke { align-self: flex-start; font-size: clamp(1rem, 1.1vw, 1.15rem); }
 .hero-fakta {
-  margin-top: 3rem;
-  font-size: 0.85rem;
+  margin-top: 3.5rem;
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
   color: rgba(28, 28, 26, 0.75);
 }
 .hero-bilete { position: relative; min-height: 420px; }
