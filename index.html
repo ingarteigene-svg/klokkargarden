@@ -314,6 +314,24 @@
   }
 
   /* Hero-lastesekvens */
+  .hero-sub { margin-bottom: 1.1rem; }
+  .hero-fakta {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-on-green);
+    margin-bottom: 2.5rem;
+  }
+  .hero-knappar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cta--fylt { background: var(--white); color: var(--brg); }
+  .cta--fylt:hover { background: transparent; color: var(--white); }
+
   .hero-seq {
     opacity: 0;
     transform: translateY(12px);
@@ -694,9 +712,19 @@
     margin: 4.5rem auto 0;
     text-align: left;
   }
+  .gardsbutikk { background: #E9EFE3; }
   .info-item {
-    border-top: 1px solid var(--gold-on-green);
+    border-top: 1px solid var(--gold);
     padding-top: 1.25rem;
+  }
+  .info-item .nr {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1;
+    color: var(--brg);
+    margin-bottom: 0.7rem;
   }
   .info-item strong {
     display: block;
@@ -704,12 +732,16 @@
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    color: var(--brg);
     margin-bottom: 0.4rem;
   }
   .info-item span {
     font-size: 0.95rem;
-    color: rgba(255,255,255,0.75);
+    color: rgba(28, 28, 26, 0.72);
   }
+  .finn-vegen { text-align: center; margin-top: 3.5rem; }
+  .gardsbutikk .lenke-sek { border-color: var(--gold); color: var(--brg); }
+  .gardsbutikk .lenke-sek:hover { color: var(--gold-ink); }
   @media (max-width: 700px) {
     .info-row { grid-template-columns: 1fr; gap: 2rem; }
   }
@@ -820,9 +852,9 @@
   <a class="logo" href="#"><img src="assets/logo.svg" alt="Klokkargarden — Anno 1860"></a>
   <div class="nav-hogre">
     <div class="nav-links">
-      <a href="#historia">Historia</a>
       <a href="#gardsbutikken">Gardsbutikken</a>
       <a href="#egga">Egga</a>
+      <a href="#historia">Historia</a>
       <a href="#kontakt">Kontakt</a>
     </div>
     <div class="nav-ikon">
@@ -846,13 +878,118 @@
     <span class="eyebrow hero-seq" style="--d:0.1s">Gard og gardsbutikk &middot; Hareid</span>
     <h1 class="hero-seq" style="--d:0.25s">Klokkargarden</h1>
     <div class="anno hero-seq" style="--d:0.4s"><span>Anno 1860</span></div>
-    <p class="hero-sub hero-seq" style="--d:0.55s">Ferske egg og ekte gardsdrift p&aring; Sunnm&oslash;re &mdash; sidan 1860.</p>
-    <a class="cta hero-seq" style="--d:0.7s" href="#gardsbutikken">Bes&oslash;k gardsbutikken</a>
+    <p class="hero-sub hero-seq" style="--d:0.55s">Ferske egg. Rett fr&aring; garden.</p>
+    <p class="hero-fakta hero-seq" style="--d:0.65s">D&oslash;gnope &middot; Sj&oslash;lvbetent &middot; Betal med Vipps</p>
+    <div class="hero-knappar hero-seq" style="--d:0.8s">
+      <a class="cta cta--fylt" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Finn vegen</a>
+      <a class="cta" href="#gardsbutikken">Gardsbutikken</a>
+    </div>
   </div>
   <div class="scroll-cue" aria-hidden="true"></div>
 </header>
 
 <main>
+
+  <section class="section gardsbutikk" id="gardsbutikken">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Gardsbutikken</span>
+      <h2 class="reveal">Kortreist. Ferskt. Fr&aring; garden.</h2>
+      <p>Sj&oslash;lvbetent gardsbutikk like ved hovudvegen gjennom Hareid &mdash; d&oslash;gnopen, 365 dagar i &aring;ret. Egga er plukka, sorterte og lagde fram same dagen. Kom innom n&aring;r det passar deg.</p>
+    </div>
+    <div class="info-row">
+      <div class="info-item">
+        <span class="nr">1</span>
+        <strong>Vel egga dine</strong>
+        <span>Ferske fr&aring; h&oslash;nseriet, lagde fram same dagen</span>
+      </div>
+      <div class="info-item">
+        <span class="nr">2</span>
+        <strong>Betal med Vipps</strong>
+        <span>Enkelt og trygt &mdash; ingen k&oslash;, inga kasse</span>
+      </div>
+      <div class="info-item">
+        <span class="nr">3</span>
+        <strong>Ta dei med heim</strong>
+        <span>D&oslash;gnope, 365 dagar i &aring;ret</span>
+      </div>
+    </div>
+    <div class="finn-vegen">
+      <a class="lenke-sek" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Finn vegen til gardsbutikken</a>
+    </div>
+  </section>
+
+  <section class="section" id="egga">
+    <div class="section-inner">
+      <img class="egg-merke" src="assets/egg-merke.png" alt="Klokkargarden Egg" loading="lazy">
+      <span class="eyebrow reveal">Egga v&aring;re</span>
+      <h2 class="reveal">Kvalitet du smakar. Kvar dag.</h2>
+      <p>I Klokkargarden har vi ein lidenskap for ferske og kortreiste matvarer. Egga v&aring;re er produserte lokalt, med eit eigenutvikla spesialf&ocirc;r &mdash; paprika og tagetes gir plomma den karakteristiske fargen, og tilsett jod gjer egga rike p&aring; jod. Det er dette som gir den reine, gode smaken egga v&aring;re har blitt s&aring; kjende for.</p>
+      <p>Dei 15&nbsp;167 h&oslash;nene v&aring;re g&aring;r fritt, b&aring;de h&oslash;gt og l&aring;gt. Dei kan &laquo;bade&raquo; i str&oslash;et, vagle seg i h&oslash;gda eller trekkje seg tilbake i eit av reira &mdash; heilt som dei vil. Trivsel gir gode egg.</p>
+      <p>Fr&aring; bakverk til frukostbord: egg fr&aring; Klokkargarden passar like godt uansett kva du lagar.</p>
+    </div>
+    <div class="bilderekke">
+      <figure>
+        <img src="assets/is-rabarbra.jpg" alt="Heimelaga is med rabarbra ved sida av ei gammal kj&oslash;kkenvekt" loading="lazy">
+        <figcaption>Heimelaga is og rabarbra</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/egg-brett.jpg" alt="Ferske kvite egg i brett, sett ovanfr&aring;" loading="lazy">
+        <figcaption>Ferske fr&aring; reiret</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/karamellpudding.jpg" alt="Heimelaga karamellpudding med utsikt over bygda" loading="lazy">
+        <figcaption>Heimelaga karamellpudding</figcaption>
+      </figure>
+    </div>
+    <div class="merker">
+      <div class="merke">
+        <strong>KSL-godkjend</strong>
+        <span>Kvalitetssystemet i landbruket, med godkjend dyrevelferdsprogram &mdash; uavhengig kontroll av at h&oslash;nene har det godt.</span>
+      </div>
+      <div class="merke">
+        <strong>Godkjend Lokalmat</strong>
+        <span>Godkjend lokalmatprodusent gjennom Sunnm&oslash;rsegg AS &mdash; mat med dokumentert lokalt opphav.</span>
+      </div>
+      <div class="merke">
+        <strong>Rik p&aring; jod</strong>
+        <span>50&nbsp;&micro;g jod per 100&nbsp;g, dokumentert i laboratorieanalysar &mdash; to egg gir om lag ein tredel av dagleg referanseinntak. Jod bidreg til normal produksjon av skjoldbruskkjertelhormon og normal skjoldbruskkjertelfunksjon.</span>
+      </div>
+    </div>
+    <div class="omtalar" aria-label="Kundeomtalar">
+      <figure class="omtale">
+        <p>M&oslash;kje gode ferske egg rett fr&aring; h&oslash;n&aring;.</p>
+        <cite>Kunde, via Facebook</cite>
+      </figure>
+      <figure class="omtale">
+        <p>Dei beste egga f&aring;r vi hj&aring; dokke.</p>
+        <cite>Kunde, via Facebook</cite>
+      </figure>
+      <figure class="omtale">
+        <p>Veldig gode egg. Litt lang veg &aring; k&oslash;yre fr&aring; Fosnav&aring;gen, men er innom av og til.</p>
+        <cite>Kunde fr&aring; Fosnav&aring;g, via Facebook</cite>
+      </figure>
+      <figure class="omtale">
+        <p>Supre flotte egg, finst ikkje maken &mdash; og s&aring; n&aelig;r produsert!</p>
+        <cite>Kunde, via Facebook</cite>
+      </figure>
+      <figure class="omtale">
+        <p>Super kvalitet. Fantastisk til &aring; bake med, og kjempegode til &aring; spise.</p>
+        <cite>Kunde, via Facebook</cite>
+      </figure>
+      <figure class="omtale">
+        <p>Takk for verdens beste egg.</p>
+        <cite>Kunde, via Facebook</cite>
+      </figure>
+    </div>
+  </section>
+
+  <section class="signatur" aria-label="Klokkargarden Egg">
+    <img src="assets/plomme-stor.jpg" alt="Stekte egg med djupt oransje plommer" loading="lazy">
+    <div class="signatur-tekst">
+      <span class="eyebrow">Klokkargarden Egg</span>
+      <p>Etter meir enn 100 &aring;r med samanhengande eggproduksjon p&aring; garden kan vi med handa p&aring; hjartet seie &eacute;in ting &mdash; gulare blir dei ikkje.</p>
+    </div>
+  </section>
 
   <div class="tal" aria-label="N&oslash;kkeltal for Klokkargarden">
     <div class="tal-item"><strong>1860</strong><span>Klokkaren fekk sk&oslash;yte</span></div>
@@ -905,102 +1042,6 @@
         <figcaption>&Aring;sbj&oslash;rg (Grimstad) Teigene med bukken &mdash; og Klokkar-Ingolf i arbeid p&aring; garden<br>&mdash; fr&aring; familiearkivet &mdash;</figcaption>
       </figure>
       <div class="anno"><span>Anno 1860</span></div>
-  </section>
-
-  <section class="section on-green" id="gardsbutikken">
-    <div class="section-inner">
-      <span class="eyebrow reveal">Gardsbutikken</span>
-      <h2 class="reveal">Kortreist. Ferskt. Fr&aring; garden.</h2>
-      <p>I gardsbutikken finn du ferske egg fr&aring; h&oslash;nene v&aring;re &mdash; plukka, sorterte og lagde fram same dagen. Butikken er d&oslash;gnopen, 365 dagar i &aring;ret, og du betaler enkelt med Vipps.</p>
-    </div>
-    <div class="info-row">
-      <div class="info-item">
-        <strong>Ferske egg</strong>
-        <span>Fr&aring; h&oslash;nseriet, kvar dag</span>
-      </div>
-      <div class="info-item">
-        <strong>D&oslash;gnope</strong>
-        <span>Sj&oslash;lvbetent, 365 dagar i &aring;ret</span>
-      </div>
-      <div class="info-item">
-        <strong>Betal med Vipps</strong>
-        <span>Enkelt og trygt</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="egga">
-    <div class="section-inner">
-      <img class="egg-merke" src="assets/egg-merke.png" alt="Klokkargarden Egg" loading="lazy">
-      <span class="eyebrow reveal">Egga v&aring;re</span>
-      <h2 class="reveal">Kvalitet du smakar. Kvar dag.</h2>
-      <p>I Klokkargarden har vi ein lidenskap for ferske og kortreiste matvarer. Egga v&aring;re er produserte lokalt, og med eit naturleg, eigenutvikla spesialf&ocirc;r gir vi h&oslash;nene den beste n&aelig;ringa dei kan f&aring; &mdash; i den opphavlege oppskrifta var det innblandinga av paprika og tagetes som til slutt kalibrerte den karakteristiske fargen p&aring; plomma. Det er dette som gir den reine, gode smaken egga v&aring;re har blitt s&aring; kjende for.</p>
-      <p>F&ocirc;ret er ogs&aring; tilsett jod, som naturleg f&oslash;lgjer med over i egget. Laboratorieanalysar dokumenterer 50&nbsp;&micro;g jod per 100&nbsp;g &mdash; det gjer egga v&aring;re rike p&aring; jod, og to egg gir om lag ein tredel av dagleg referanseinntak for vaksne (150&nbsp;&micro;g). Jod bidreg til normal produksjon av skjoldbruskkjertelhormon og normal skjoldbruskkjertelfunksjon.</p>
-      <p>Dei 15&nbsp;167 h&oslash;nene v&aring;re g&aring;r fritt, b&aring;de h&oslash;gt og l&aring;gt. Dei kan &laquo;bade&raquo; i str&oslash;et, vagle seg i h&oslash;gda eller trekkje seg tilbake i eit av reira &mdash; heilt som dei vil. Trivsel gir gode egg.</p>
-      <p>Fr&aring; bakverk til frukostbord: egg fr&aring; Klokkargarden passar like godt uansett kva du lagar.</p>
-    </div>
-    <div class="bilderekke">
-      <figure>
-        <img src="assets/is-rabarbra.jpg" alt="Heimelaga is med rabarbra ved sida av ei gammal kj&oslash;kkenvekt" loading="lazy">
-        <figcaption>Heimelaga is og rabarbra</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/egg-brett.jpg" alt="Ferske kvite egg i brett, sett ovanfr&aring;" loading="lazy">
-        <figcaption>Ferske fr&aring; reiret</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/karamellpudding.jpg" alt="Heimelaga karamellpudding med utsikt over bygda" loading="lazy">
-        <figcaption>Heimelaga karamellpudding</figcaption>
-      </figure>
-    </div>
-    <div class="merker">
-      <div class="merke">
-        <strong>KSL-godkjend</strong>
-        <span>Kvalitetssystemet i landbruket, med godkjend dyrevelferdsprogram &mdash; uavhengig kontroll av at h&oslash;nene har det godt.</span>
-      </div>
-      <div class="merke">
-        <strong>Godkjend Lokalmat</strong>
-        <span>Godkjend lokalmatprodusent gjennom Sunnm&oslash;rsegg AS &mdash; mat med dokumentert lokalt opphav.</span>
-      </div>
-      <div class="merke">
-        <strong>Rik p&aring; jod</strong>
-        <span>50&nbsp;&micro;g jod per 100&nbsp;g, dokumentert i laboratorieanalysar &mdash; to egg gir om lag ein tredel av dagsbehovet.</span>
-      </div>
-    </div>
-    <div class="omtalar" aria-label="Kundeomtalar">
-      <figure class="omtale">
-        <p>M&oslash;kje gode ferske egg rett fr&aring; h&oslash;n&aring;.</p>
-        <cite>Kunde, via Facebook</cite>
-      </figure>
-      <figure class="omtale">
-        <p>Dei beste egga f&aring;r vi hj&aring; dokke.</p>
-        <cite>Kunde, via Facebook</cite>
-      </figure>
-      <figure class="omtale">
-        <p>Veldig gode egg. Litt lang veg &aring; k&oslash;yre fr&aring; Fosnav&aring;gen, men er innom av og til.</p>
-        <cite>Kunde fr&aring; Fosnav&aring;g, via Facebook</cite>
-      </figure>
-      <figure class="omtale">
-        <p>Supre flotte egg, finst ikkje maken &mdash; og s&aring; n&aelig;r produsert!</p>
-        <cite>Kunde, via Facebook</cite>
-      </figure>
-      <figure class="omtale">
-        <p>Super kvalitet. Fantastisk til &aring; bake med, og kjempegode til &aring; spise.</p>
-        <cite>Kunde, via Facebook</cite>
-      </figure>
-      <figure class="omtale">
-        <p>Takk for verdens beste egg.</p>
-        <cite>Kunde, via Facebook</cite>
-      </figure>
-    </div>
-  </section>
-
-  <section class="signatur" aria-label="Klokkargarden Egg">
-    <img src="assets/plomme-stor.jpg" alt="Stekte egg med djupt oransje plommer" loading="lazy">
-    <div class="signatur-tekst">
-      <span class="eyebrow">Klokkargarden Egg</span>
-      <p>Etter meir enn 100 &aring;r med samanhengande eggproduksjon p&aring; garden kan vi med handa p&aring; hjartet seie &eacute;in ting &mdash; gulare blir dei ikkje.</p>
-    </div>
   </section>
 
   <section class="section on-green" id="kontakt" style="padding-bottom: 6rem;">
