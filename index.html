@@ -51,131 +51,180 @@
   "paymentAccepted": "Vipps"
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/stil.css">
 </head>
 <body>
 
-<nav class="nav">
-  <a class="logo" href="/"><img src="assets/logo-gron.svg" alt="Klokkargarden — Anno 1860"></a>
-  <div class="nav-hogre">
-    <div class="nav-links">
-      <a href="#gardsbutikken">Gardsbutikken</a>
-      <a href="egga.html">Egga v&aring;re</a>
-      <a href="historia.html">Historia</a>
-    </div>
-    <a class="knapp" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Finn oss<span class="pil">&nearr;</span></a>
-  </div>
-</nav>
+<a class="hopp" href="#innhald">Hopp til innhaldet</a>
 
-<header class="hero-delt">
-  <div class="hero-tekst">
-    <span class="eyebrow">Gard og gardsbutikk &middot; Hareid</span>
-    <h1>Ferske egg.<br>Rett fr&aring; garden.</h1>
-    <p class="ingress">Ferske egg og ekte gardsdrift p&aring; Sunnm&oslash;re &mdash; sidan 1860.</p>
-    <a class="knapp" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Finn vegen til gardsbutikken<span class="pil">&nearr;</span></a>
-    <a class="lenke" href="egga.html">Les om egga v&aring;re &rarr;</a>
-    <p class="hero-fakta">D&oslash;gnopen &middot; Sj&oslash;lvbetent &middot; Betal med Vipps</p>
-  </div>
-  <div class="hero-bilete">
-    <img src="assets/plomme-stor.jpg" alt="Stekte egg med djupt oransje plommer">
+<header class="topp gron">
+  <div class="ramme topp-inner">
+    <a class="topp-logo" href="/"><img src="assets/logo.svg" width="743" height="160" alt="Klokkargarden — Anno 1860"></a>
+    <div class="topp-hogre">
+      <nav class="meny" aria-label="Hovudmeny">
+        <a href="#gardsbutikken">Gardsbutikken</a>
+        <a href="egga.html">Egga våre</a>
+        <a href="historia.html">Historia</a>
+      </nav>
+      <a class="knapp knapp--liten" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Finn oss<span class="pil pil--ut" aria-hidden="true"></span></a>
+    </div>
   </div>
 </header>
+<div class="undermeny gron">
+  <nav class="ramme meny" aria-label="Hovudmeny">
+        <a href="#gardsbutikken">Gardsbutikken</a>
+        <a href="egga.html">Egga våre</a>
+        <a href="historia.html">Historia</a>
+  </nav>
+</div>
 
-<main>
+<main id="innhald">
 
-  <div class="fakta" aria-label="Kort om gardsbutikken">
-    <div><strong>D&oslash;gnopen</strong><span>365 dagar i &aring;ret</span></div>
-    <div><strong>Ferske egg</strong><span>Fr&aring; h&oslash;nseriet, kvar dag</span></div>
-    <div><strong>Betal med Vipps</strong><span>Enkelt og trygt</span></div>
+  <section class="hero gron">
+    <div class="hero-tekst">
+      <span class="eyebrow eyebrow--strek">Gard og gardsbutikk · Hareid</span>
+      <h1>Ferske egg.<br>Rett frå garden.</h1>
+      <p class="ingress">Ferske egg og ekte gardsdrift på Sunnmøre — sidan 1860.</p>
+      <div class="hero-val">
+        <a class="knapp" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Finn vegen til gardsbutikken<span class="pil pil--ut" aria-hidden="true"></span></a>
+        <a class="lenke" href="egga.html">Les om egga våre<span class="pil pil--fram" aria-hidden="true"></span></a>
+      </div>
+    </div>
+    <figure class="hero-bilete">
+      <img src="assets/plomme-stor.jpg" width="1200" height="1200" alt="Stekte egg med djupt oransje plommer" fetchpriority="high">
+      <figcaption>Gulare blir dei ikkje.</figcaption>
+      <span class="segl"><img src="assets/egg-segl.png" width="360" height="360" alt="Klokkargarden Egg — klokkesegl"></span>
+    </figure>
+  </section>
+
+  <div class="fakta gron" aria-label="Kort om gardsbutikken">
+    <div class="ramme fakta-rad">
+      <div><strong>Døgnopen</strong><span>365 dagar i året</span></div>
+      <div><strong>Ferske egg</strong><span>Frå hønseriet, kvar dag</span></div>
+      <div><strong>Betal med Vipps</strong><span>Enkelt og trygt</span></div>
+    </div>
   </div>
 
-  <section class="delt" id="gardsbutikken">
-    <figure>
-      <img src="assets/egg-brett-stor.jpg" alt="Ferske kvite egg i brett, sett ovanfr&aring;">
-    </figure>
-    <div class="delt-tekst">
-      <span class="eyebrow">Gardsbutikken</span>
-      <h2 class="h2">Kortreist. Ferskt. Fr&aring; garden.</h2>
-      <p>I gardsbutikken finn du ferske egg fr&aring; h&oslash;nene v&aring;re &mdash; plukka, sorterte og lagde fram same dagen. Butikken er sj&oslash;lvbetent og d&oslash;gnopen, 365 dagar i &aring;ret. Du vel egga, betaler med Vipps og tek dei med heim.</p>
-      <p class="adresse">Hareidsvegen, 6060 Hareid &mdash; like ved hovudvegen gjennom Hareid, godt synleg fr&aring; vegen. Butikken ligg i det gule h&oslash;nsehuset.</p>
-      <a class="knapp" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Opne i kart<span class="pil">&nearr;</span></a>
-    </div>
-  </section>
-
-  <section class="vegvisar" aria-label="Slik finn du inngangen til gardsbutikken">
-    <span class="eyebrow">Finn rett d&oslash;r</span>
-    <figure>
-      <div class="vegvisar-bilete">
-        <img src="assets/gardsbutikken-bygg.webp" width="1000" height="262" alt="Illustrasjon av h&oslash;nsehuset p&aring; Klokkargarden: eit gult trebygg med bl&aring; d&oslash;rer og ein h&oslash;g f&ocirc;rsilo til h&oslash;gre." loading="lazy">
-        <span class="dor-ring" aria-hidden="true"></span>
+  <section class="band" id="gardsbutikken">
+    <div class="ramme">
+      <div class="delt delt--smalt-bilete">
+        <div class="delt-tekst">
+          <span class="eyebrow">Gardsbutikken</span>
+          <h2 class="tittel">Kortreist. Ferskt. Frå garden.</h2>
+          <p class="ingress">I gardsbutikken finn du ferske egg frå hønene våre — plukka, sorterte og lagde fram same dagen. Butikken er sjølvbetent og døgnopen, 365 dagar i året.</p>
+          <ol class="steg" aria-label="Slik handlar du">
+            <li>Du vel egga</li>
+            <li>Betaler med Vipps</li>
+            <li>Tek dei med heim</li>
+          </ol>
+        </div>
+        <figure>
+          <img src="assets/egg-brett-stor.jpg" width="800" height="800" alt="Ferske kvite egg i brett, sett ovanfrå" loading="lazy">
+        </figure>
       </div>
-      <figcaption>Inngangen til gardsbutikken er den bl&aring; d&oslash;ra n&aelig;rmast siloen.</figcaption>
-    </figure>
-  </section>
 
-  <section class="to-bilete">
-    <h2 class="h2">Kvalitet du smakar. Kvar dag.</h2>
-    <div class="to-bilete-rad">
-      <a href="egga.html"><figure>
-        <img src="assets/honsehuset-2026.jpg" alt="Frittg&aring;ande h&oslash;ner i h&oslash;nsehuset p&aring; Klokkargarden" loading="lazy">
-        <figcaption>H&oslash;nene og drifta &rarr;</figcaption>
-      </figure></a>
-      <a href="egga.html"><figure>
-        <img src="assets/karamellpudding-bred.jpg" alt="Heimelaga karamellpudding med utsikt over bygda" loading="lazy">
-        <figcaption>Fr&aring; bakverk til frukostbord &rarr;</figcaption>
-      </figure></a>
-    </div>
-    <div class="omtale-ein">
-      <p>&laquo;Dei beste egga f&aring;r vi hj&aring; dokke.&raquo;</p>
-      <cite>Kunde, via Facebook</cite>
+      <div class="vegvisar" aria-label="Slik finn du inngangen til gardsbutikken">
+        <div class="vegvisar-hovud">
+          <span class="eyebrow">Finn rett dør</span>
+          <p>Inngangen til gardsbutikken er den blå døra nærmast siloen.</p>
+        </div>
+        <div class="vegvisar-bilete">
+          <img src="assets/gardsbutikken-bygg.webp" width="1000" height="262" alt="Illustrasjon av hønsehuset på Klokkargarden: eit gult trebygg med blå dører og ein høg fôrsilo til høgre." loading="lazy">
+          <span class="dor-ring" aria-hidden="true"></span>
+        </div>
+        <div class="vegvisar-fot">
+          <p><strong>Hareidsvegen, 6060 Hareid</strong> — like ved hovudvegen gjennom Hareid, godt synleg frå vegen. Butikken ligg i det gule hønsehuset.</p>
+          <a class="knapp" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Opne i kart<span class="pil pil--ut" aria-hidden="true"></span></a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="sage">
-    <div class="delt delt--bilete-hogre" id="historia">
-      <figure>
-        <img class="liggande" src="assets/tunet-1905.jpg" alt="Familien samla framfor det gamle hovudhuset med torvtak p&aring; Klokkargarden" loading="lazy">
-        <figcaption>Fr&aring; familiearkivet, kring 1905&ndash;1910</figcaption>
-      </figure>
-      <div class="delt-tekst">
-        <span class="eyebrow">Historia</span>
-        <h2 class="h2">Ein gard med r&oslash;ter. Sidan&nbsp;1860.</h2>
-        <p>Lars Hareide var klokkaren i bygda. Difor Klokkargarden. Seks generasjonar seinare er garden framleis i same slekta sine hender &mdash; same tun, same jord, same slekt.</p>
-        <a class="lenke" href="historia.html">Les historia &rarr;</a>
+  <section class="signatur gron" aria-labelledby="egga-tittel">
+    <div class="signatur-bilete">
+      <img src="assets/honsehuset-2026.jpg" width="960" height="720" alt="Frittgåande høner i hønsehuset på Klokkargarden" loading="lazy">
+    </div>
+    <div class="signatur-tekst">
+      <span class="eyebrow">Egga våre</span>
+      <h2 class="tittel" id="egga-tittel">Kvalitet du smakar. Kvar dag.</h2>
+      <p>15&nbsp;167 frittgåande høner, eigenutvikla fôr — og egg som er dokumentert rike på jod.</p>
+      <ul class="merkeliste">
+        <li>KSL-godkjend</li>
+        <li>Godkjend Lokalmat</li>
+        <li>Rik på jod</li>
+      </ul>
+      <a class="lenke" href="egga.html">Hønene og drifta<span class="pil pil--fram" aria-hidden="true"></span></a>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="ramme delt">
+      <blockquote class="sitat">
+        <p>«Dei beste egga får vi hjå dokke.»</p>
+        <cite>Kunde, via Facebook</cite>
+      </blockquote>
+      <a class="biletlenke" href="egga.html">
+        <figure>
+          <div class="bilete"><img src="assets/karamellpudding-bred.jpg" width="960" height="720" alt="Heimelaga karamellpudding med utsikt over bygda" loading="lazy"></div>
+          <figcaption>Frå bakverk til frukostbord<span class="pil pil--fram" aria-hidden="true"></span></figcaption>
+        </figure>
+      </a>
+    </div>
+  </section>
+
+  <section class="band band--sage" id="historia">
+    <div class="ramme">
+      <div class="delt delt--bilete-fyrst">
+        <div class="delt-tekst">
+          <span class="eyebrow">Historia</span>
+          <h2 class="tittel">Ein gard med røter. Sidan&nbsp;1860.</h2>
+          <p class="ingress">Lars Hareide var klokkaren i bygda. Difor Klokkargarden. Seks generasjonar seinare er garden framleis i same slekta sine hender — same tun, same jord, same slekt.</p>
+          <a class="lenke" href="historia.html">Les historia<span class="pil pil--fram" aria-hidden="true"></span></a>
+        </div>
+        <figure class="innramma">
+          <img src="assets/tunet-1905.jpg" width="960" height="706" alt="Familien samla framfor det gamle hovudhuset med torvtak på Klokkargarden" loading="lazy">
+          <figcaption>Frå familiearkivet, kring 1905–1910</figcaption>
+        </figure>
+      </div>
+      <div class="tal etter-delt" aria-label="Nøkkeltal for Klokkargarden">
+        <div><strong>1860</strong><span>Klokkaren fekk skøyte</span></div>
+        <div><strong>6</strong><span>Generasjonar</span></div>
+        <div><strong>15&nbsp;167</strong><span>Høner</span></div>
+        <div><strong>365</strong><span>Dagar open i året</span></div>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer>
-  <div class="footer-topp">
-    <div>
-      <h2 class="h2">Velkomen til gards.</h2>
-      <p><a href="tel:+4790081775">900 81 775</a> &nbsp;&middot;&nbsp; <a href="mailto:post@klokkargarden.com">post@klokkargarden.com</a></p>
+<footer class="botn gron">
+  <div class="ramme">
+    <div class="botn-topp">
+      <div>
+        <h2>Velkomen til gards.</h2>
+        <p class="botn-kontakt"><a href="tel:+4790081775">900 81 775</a> &nbsp;·&nbsp; <a href="mailto:post@klokkargarden.com">post@klokkargarden.com</a></p>
+      </div>
+      <a class="knapp" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Finn vegen<span class="pil pil--ut" aria-hidden="true"></span></a>
     </div>
-    <a class="knapp knapp--lys" href="https://maps.app.goo.gl/sHMasXteWBAqaZqo9" target="_blank" rel="noopener">Finn vegen<span class="pil">&nearr;</span></a>
-  </div>
-  <div class="footer-inner">
-    <div class="footer-kol">
-      <img class="footer-logo" src="assets/logo.svg" alt="Klokkargarden &mdash; Anno 1860">
-      <p>Gard og gardsbutikk p&aring; Hareid &mdash; i same slekta sidan 1860.</p>
+    <div class="botn-kol">
+      <div>
+        <p class="stor">Gard og gardsbutikk på Hareid — i same slekta sidan 1860.</p>
+      </div>
+      <div>
+        <h3>Finn oss</h3>
+        <p>Hareidsvegen, 6060 Hareid<br><a href="tel:+4790081775">900 81 775</a><br><a href="mailto:post@klokkargarden.com">post@klokkargarden.com</a></p>
+      </div>
+      <div>
+        <h3>Gardsbutikken</h3>
+        <p>Døgnopen, 365 dagar i året<br>Sjølvbetent · Betal med Vipps<br>Inngang: blå dør nærmast siloen<br><a href="https://www.facebook.com/klokkargard1" target="_blank" rel="noopener">Følg oss på Facebook</a></p>
+      </div>
     </div>
-    <div class="footer-kol">
-      <h3>Finn oss</h3>
-      <p>Hareidsvegen, 6060 Hareid<br><a href="tel:+4790081775">900 81 775</a><br><a href="mailto:post@klokkargarden.com">post@klokkargarden.com</a></p>
+    <div class="botn-merke">
+      <img src="assets/logo.svg" width="743" height="160" alt="Klokkargarden — Anno 1860" loading="lazy">
+      <p class="copyright">© Klokkargarden · Klokkargarden AS · Org.nr 899 589 572</p>
     </div>
-    <div class="footer-kol">
-      <h3>Gardsbutikken</h3>
-      <p>D&oslash;gnopen, 365 dagar i &aring;ret<br>Sj&oslash;lvbetent &middot; Betal med Vipps<br>Inngang: bl&aring; d&oslash;r n&aelig;rmast siloen<br><a href="https://www.facebook.com/klokkargard1" target="_blank" rel="noopener">F&oslash;lg oss p&aring; Facebook</a></p>
-    </div>
-  </div>
-  <div class="footer-botn">
-    <div class="anno"><span>Anno 1860</span></div>
-    <p class="copyright">&copy; Klokkargarden &middot; Klokkargarden AS &middot; Org.nr 899 589 572</p>
   </div>
 </footer>
 
